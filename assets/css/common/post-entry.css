@@ -41,6 +41,16 @@
     border-radius: var(--radius);
     transition: transform 0.1s;
     border: 1px solid var(--border);
+    display: grid;
+    align-items: center;
+    grid-column-gap: 2px;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(0, 1fr) auto auto auto;
+    grid-template-areas:
+        'image'
+        'subtitle'
+        'title'
+        'blurb';
 }
 
 .post-entry:active {
@@ -64,7 +74,7 @@
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
 }
 
 .entry-footer {
