@@ -55,7 +55,7 @@
     {{- $isHidden := (.Site.Params.cover.hidden | default .Site.Params.cover.hiddenInList) }}
     {{- partial "cover-list.html" (dict "cxt" . "IsHome" true "isHidden" $isHidden) }}
     <footer class="entry-footer">
-        {{- partial "post_meta.html" . -}}
+        <span>{{- partial "post_meta.html" . -}}</span>
     </footer>
     <header class="entry-header">
         <h2>
